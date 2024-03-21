@@ -25,8 +25,7 @@ end
 
 function addChairSpells(entity)
     TryAddSpell(entity, "COCK_UTILS")
-    TryAddSpell(entity, "COCK_CHAIRS")
-    TryAddSpell(entity, "COCK_BENCHES")
+    TryAddSpell(entity, "COCK_OBJECTS")
 end
 
 Ext.Events.SessionLoaded:Subscribe(OnSessionLoaded)
