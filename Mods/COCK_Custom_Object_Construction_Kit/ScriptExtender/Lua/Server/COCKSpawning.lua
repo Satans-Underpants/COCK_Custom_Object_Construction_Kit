@@ -62,8 +62,8 @@ Ext.Osiris.RegisterListener("UsingSpellAtPosition", 8, "after", function(_, x, y
 
     -- check if spell is supposed to spawn furniture
     if CUSTOMOBJECTS[spell] then
-        local spawnedFurniture = Osi.CreateAt(CUSTOMOBJECTS[spell], x, y, z, 1, 0, "")
-        table.insert(spawnedItems(), spawnedFurniture)
+        local spawnedObjects = Osi.CreateAt(CUSTOMOBJECTS[spell], x, y, z, 1, 0, "")
+        table.insert(spawnedItems(), spawnedObjects)
     end
 end)
 

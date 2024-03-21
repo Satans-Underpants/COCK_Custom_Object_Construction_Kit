@@ -38,6 +38,20 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<!-- <attribute id="Stats" type="FixedString" value="" /> --> -- Optional because ParentTemplate uses it - Different statsets can be created in chair_object.txt
 				</node>
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="14" /> -- REQUIRED - "14" = Use/interact action
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
 
 -----------------------------------------------------------------------------------------------
 

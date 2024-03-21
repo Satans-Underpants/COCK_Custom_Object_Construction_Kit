@@ -17,6 +17,6 @@ ORIGINS = {
 -- Table links spell names to mapkey of new custom game objects
 CUSTOMOBJECTS = {
 
-    ["COCK_Test"] = "b215df87-c0d4-4d81-95fb-1e385f645da6",
+    ["COCK_Test"] = "cc87d017-c6cc-40e3-ae46-d56bd12e6d30",
 
 }
