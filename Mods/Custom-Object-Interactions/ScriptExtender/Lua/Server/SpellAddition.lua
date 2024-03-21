@@ -6,12 +6,12 @@ function OnSessionLoaded()
     Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(_, _)
         local party = Osi.DB_PartyMembers:Get(nil)
         for i = #party, 1, -1 do
-            addChairSpells(party[i][1])
+            addCockSpells(party[i][1])
         end
     end)
 
     Ext.Osiris.RegisterListener("CharacterJoinedParty", 1, "after", function(actor)
-        addChairSpells(actor)
+        addCockSpells(actor)
     end)
 end
 
@@ -23,7 +23,7 @@ function TryAddSpell(actor, spellName)
     end
 end
 
-function addChairSpells(entity)
+function addCockSpells(entity)
     TryAddSpell(entity, "COCK_UTILS")
     TryAddSpell(entity, "COCK_OBJECTS")
 end
