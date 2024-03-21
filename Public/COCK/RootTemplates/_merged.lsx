@@ -7,12 +7,12 @@
 
 			<!-- Create new BASE template -->
 
-				<!-- SIT_Template -->
+				<!-- COCK_Template -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="b215df87-c0d4-4d81-95fb-1e385f645da6" /> -- REQUIRED -- This templates UUID
 					<attribute id="VisualTemplate" type="FixedString" value="a92ada31-bdae-40ea-95fb-5b47191f1cf4" /> -- REQUIRED -- The actual model UUID -- REQUIRES interact bones
 					<attribute id="PhysicsTemplate" type="FixedString" value="62a83981-5a5e-45c6-a3ed-02adaf864121" /> -- REQUIRED - But not needed for objects using this template
-					<attribute id="Stats" type="FixedString" value="SIT_Template" /> -- REQUIRED - Additional stats created in chair_object.txt - Not needed for objects using this template
+					<attribute id="Stats" type="FixedString" value="COCK_Template" /> -- REQUIRED - Additional stats created in chair_object.txt - Not needed for objects using this template
 					<attribute id="Type" type="FixedString" value="item" /> -- REQUIRED
 					<attribute id="CanBeMoved" type="bool" value="True" /> -- REQUIRED - Not needed for objects using the template
 					<attribute id="WalkThrough" type="bool" value="True" /> -- OPTIONAL
@@ -34,7 +34,7 @@
 				<node id="GameObjects">
 					<attribute id="Name" type="FixedString" value="Druid Stone Bench" /> -- REQUIRED - For worldspace object "Name_UUID" output
 					<attribute id="MapKey" type="FixedString" value="201cbe54-4fd3-4305-8c16-2336259dbe4c" /> -- REQUIRED - But here never used anywhere because this is an example
-					<attribute id="ParentTemplateId" type="FixedString" value="b215df87-c0d4-4d81-95fb-1e385f645da6" /> -- REQUIRED - This makes the gameobject use the setup of SIT_Template
+					<attribute id="ParentTemplateId" type="FixedString" value="b215df87-c0d4-4d81-95fb-1e385f645da6" /> -- REQUIRED - This makes the gameobject use the setup of COCK_Template
 					<attribute id="VisualTemplate" type="FixedString" value="98bd95d7-1eb7-5ecc-555d-ebfb06a9c2ed" /> -- REQUIRED - The actual model UUID -- REQUIRES interact bones
 					<attribute id="DisplayName" type="TranslatedString" handle="hcfaeb141g9132g4826ga750gdeeb0124d53e" version="1" /> -- REQUIRED - Mouseover tooltip name of the gameobject
 					<attribute id="Type" type="FixedString" value="item" />
@@ -494,7 +494,7 @@
 
 -----------------------------------------------------------------------------------------------
 
-			<!-- Empty gameobject to copy/paste with SIT_Template already attached -->
+			<!-- Empty gameobject to copy/paste with COCK_Template already attached -->
 				Mod checks for gameobjects having the same "Name" as the spell to actually being able to delete them so you don't accidentally delete anything else in world space
 				What we do is creating 2 handle UUIDs for the loca spellname and description and using the spellname hUUID as the gameobjects "DisplayName"
 

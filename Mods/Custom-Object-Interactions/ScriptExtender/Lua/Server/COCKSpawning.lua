@@ -30,7 +30,7 @@ Ext.Osiris.RegisterListener("UsingSpellOnTarget", 6, "after", function(_, target
     --Clean up single item if it is furniture
     if spell == "AAA_CleanUp_One" then
         name = getNameByUniqueMapkey(target)
-        if FURNITURE[name] then
+        if CUSTOMOBJECTS[name] then
             Osi.RequestDelete(targetID)
             if contains(spawnedItems(), targetID) then
                 table.remove(spawnedItems(), getIndex(spawnedItems(),targetID))
@@ -61,8 +61,8 @@ Ext.Osiris.RegisterListener("UsingSpellAtPosition", 8, "after", function(_, x, y
     end
 
     -- check if spell is supposed to spawn furniture
-    if FURNITURE[spell] then
-        local spawnedFurniture = Osi.CreateAt(FURNITURE[spell], x, y, z, 1, 0, "")
+    if CUSTOMOBJECTS[spell] then
+        local spawnedFurniture = Osi.CreateAt(CUSTOMOBJECTS[spell], x, y, z, 1, 0, "")
         table.insert(spawnedItems(), spawnedFurniture)
     end
 end)

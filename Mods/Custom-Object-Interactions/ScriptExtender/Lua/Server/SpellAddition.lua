@@ -24,9 +24,9 @@ function TryAddSpell(actor, spellName)
 end
 
 function addChairSpells(entity)
-    TryAddSpell(entity, "Sit_Happens_UTILS")
-    TryAddSpell(entity, "Sit_Happens_CHAIRS")
-    TryAddSpell(entity, "Sit_Happens_BENCHES")
+    TryAddSpell(entity, "COCK_UTILS")
+    TryAddSpell(entity, "COCK_CHAIRS")
+    TryAddSpell(entity, "COCK_BENCHES")
 end
 
 Ext.Events.SessionLoaded:Subscribe(OnSessionLoaded)

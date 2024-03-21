@@ -15,9 +15,9 @@ ORIGINS = {
 -- Custom/modified Furniture, NOT orignial UUID [Public/Sit_Happens/RootTemplates/_merged.lsf/lsx]
 
 -- Table links spell names to mapkey of new custom game objects
-FURNITURE = {
+CUSTOMOBJECTS = {
 
-    ["AA_SIT_Template"] = "b215df87-c0d4-4d81-95fb-1e385f645da6",
+    ["AA_COCK_Template"] = "b215df87-c0d4-4d81-95fb-1e385f645da6",
     ["Temple Stone Chair"] = "8454a999-149e-4b68-b34c-a158592fddf1",
     ["Thayan Chair - A"] = "7dea1a0a-f3d8-4a23-a262-55b534e67180",
     ["Thayan Chair - B"] = "b30527ed-cf64-4feb-9f58-193c1dc221b1",
