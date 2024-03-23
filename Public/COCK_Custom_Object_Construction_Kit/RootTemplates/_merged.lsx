@@ -17,20 +17,16 @@
 					<attribute id="CanBeMoved" type="bool" value="True" /> -- REQUIRED - Not needed for objects using the template
 					<attribute id="WalkThrough" type="bool" value="True" /> -- OPTIONAL
 				</node>
-					<children>
-						<node id="OnUsePeaceActions">
-							<children>
-								<node id="Action">
-									<attribute id="ActionType" type="int32" value="14" /> -- REQUIRED - "14" = Sit - "12" Use/interact action
-									<children>
-										<node id="Attributes">
-											<attribute id="Animation" type="FixedString" value="" />
-										</node>
-									</children>
-								</node>
-							</children>
-						</node>
-					</children>
+				<children>
+					<node id="OnUsePeaceActions">
+						<children>
+							<node id="Action">
+								<attribute id="ActionType" type="int32" value="14" /> -- REQUIRED - "14" = Sit - "12" Use/interact action
+							</node>
+						</children>
+					</node>
+				</children>
+				
 			<!-- Example Object -->
 
 				<node id="GameObjects">
@@ -42,7 +38,7 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<!-- <attribute id="Stats" type="FixedString" value="" /> --> -- Optional because ParentTemplate uses it - Different statsets can be created in COCK_object.txt
 				</node>
-				
+
 -----------------------------------------------------------------------------------------------
 
 			<!-- Empty gameobject to copy/paste with COCK_Template already attached -->
