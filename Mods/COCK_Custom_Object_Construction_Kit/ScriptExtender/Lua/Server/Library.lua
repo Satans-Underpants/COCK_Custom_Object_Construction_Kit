@@ -12,21 +12,17 @@ ORIGINS = {
 }
 
 
--- Custom objects -  [Public/COCK/RootTemplates/_merged.lsf/lsx]
 
--- Table links spell names to mapkey of new custom game objects
-CUSTOMOBJECTS = {
+-- An AnimationObject contains
+-- Object Name [Game Object Name]  
+-- Object UUID [Game Object UUID] (USED FOR COCKSPAWNING)
+-- Spell Name [Name of spell that starts animation]
+-- Animation [Animation UUID]
 
-    ["COCK_Test"] = "81eeed30-7459-4412-84d6-13274c436e4b",
+COCK_ANIMOBJECTS = {
+
+    -- cc87 is bottle
+    -- 1d15 is kissing animation
+    ["COCK_TEST"] = AnimationObject.new("COCK_TEST","cc87d017-c6cc-40e3-ae46-d56bd12e6d30", "COCK_Test_Anim", "1d158dc7-694e-35e1-2238-ddeea72d8762")
 
 }
-
-
-OBJECT_ANIMATION = {
-
-    ["COCK_Test"] = "spell_name"
-}
-
-
-
--- 1d158dc7-694e-35e1-2238-ddeea72d8762

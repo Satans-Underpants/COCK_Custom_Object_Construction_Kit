@@ -2,25 +2,21 @@
 -- Object Name [Game Object Name]  
 -- Object UUID [Game Object UUID]
 -- Spell Name [Name of spell that starts animation]
+-- Animation [Animation UUID]
 
 
--- Unused for now - might be interesting for the future
-
+-- some lua magic
 AnimationObject = {}
 AnimationObject.__index = AnimationObject
 
--- Create a new AnimationObject
-function AnimationObject.new(name, uuid, spell)
-    local self = setmetatable({}, AnimationObject)
-    self.entries = {name, uuid, spell}
-    return self
-end
 
--- make iterable
-function AnimationObject:iterate()
-    local index = 0
-    return function()
-        index = index + 1
-        return self.entries[index]
-    end
+
+-- Create a new AnimationObject
+function AnimationObject.new(objectName, objectId, animSpell, animID)
+    local self = setmetatable({}, AnimationObject)
+    self.objectName = objectName
+    self.objectID = objectId
+    self.animSpell = animSpell
+    self.animID = animID
+    return self
 end
