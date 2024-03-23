@@ -15,7 +15,8 @@ Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
         print("Spell Name = ", cock.animSpell)
         print("Animation UUID = ", cock.animID)
 
-        Osi.UseSpell(character, cock.animSpell, character)
+        -- Osi.UseSpell(character, cock.animSpell, character)
+        Osi.PlayAnimation(character, cock.animID, "")
         
     end 
 end)
