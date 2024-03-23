@@ -4,8 +4,9 @@
 -- Spell Name [Name of spell that starts animation]
 -- Animation [Animation UUID]
 
-
 -- some lua magic
+
+
 AnimationObject = {}
 AnimationObject.__index = AnimationObject
 
@@ -20,3 +21,6 @@ function AnimationObject.new(objectName, objectId, animSpell, animID)
     self.animID = animID
     return self
 end
+
+print("COCKANIMATION ", COCKAnimation)
+print("AnimationObject ", AnimationObject)

@@ -33,3 +33,17 @@ function containsValue(map, item)
     end
     return false
 end
+
+
+function getUUIDByUniqueMapkey(uniqueMapkey)
+
+    local startPosition = #uniqueMapkey - 35
+    local uuid = string.sub(uniqueMapkey, startPosition)
+    return uuid
+end
+
+function getNameByUniqueMapkey(uniqueMapkey)
+    local endPosition = #uniqueMapkey - 37
+    local strippedString = string.sub(uniqueMapkey, 1, endPosition)
+    return strippedString
+end

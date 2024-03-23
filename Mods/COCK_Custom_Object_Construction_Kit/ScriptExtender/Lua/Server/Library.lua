@@ -19,10 +19,11 @@ ORIGINS = {
 -- Spell Name [Name of spell that starts animation]
 -- Animation [Animation UUID]
 
+
 COCK_ANIMOBJECTS = {
 
     -- cc87 is bottle
     -- 1d15 is kissing animation
-    ["COCK_TEST"] = AnimationObject.new("COCK_TEST","cc87d017-c6cc-40e3-ae46-d56bd12e6d30", "COCK_Test_Anim", "1d158dc7-694e-35e1-2238-ddeea72d8762")
+    ["COCK_Test"] = AnimationObject.new("COCK_Test","cc87d017-c6cc-40e3-ae46-d56bd12e6d30", "COCK_Test_Anim", "1d158dc7-694e-35e1-2238-ddeea72d8762")
 
 }
