@@ -20,3 +20,9 @@ CUSTOMOBJECTS = {
     ["COCK_Test"] = "cc87d017-c6cc-40e3-ae46-d56bd12e6d30",
 
 }
+
+
+OBJECT_ANIMATION = {
+
+    ["COCK_Test"] = "spell_name"
+}

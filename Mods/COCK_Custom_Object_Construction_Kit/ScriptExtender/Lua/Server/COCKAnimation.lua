@@ -1,10 +1,14 @@
 Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
     
-    if Osi.IsPlayer(character) then
-        if contains(spawnedItems(), item) then
-            Osi.UseSpell(character, spell, character)
-            _P("Start Animation")
-        end
-    end
+    print("Used ", item)
 
+    if OBJECT_ANIMATION[item] then
+
+        print("Spell ", OBJECT_ANIMATION[item] )
+
+        Osi.UseSpell(character, OBJECT_ANIMATION[item], character)
+        
+    end 
 end)
+
+
