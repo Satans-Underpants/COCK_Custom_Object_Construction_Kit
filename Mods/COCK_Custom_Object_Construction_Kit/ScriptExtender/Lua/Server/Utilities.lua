@@ -1,7 +1,7 @@
 function ReloadStats()
     Ext.Stats.LoadStatsFile("Public/COCK_Custom_Object_Construction_Kit/Stats/Generated/Data/COCK_objects.txt", 0)
     Ext.Stats.LoadStatsFile("Public/COCK_Custom_Object_Construction_Kit/Stats/Generated/Data/COCK_spells_util.txt", 0)
-    Ext.Stats.LoadStatsFile("Public/COCK_Custom_Object_Construction_Kit/Stats/Generated/Data/COCK_spells.txt", 0)     
+    Ext.Stats.LoadStatsFile("Public/COCK_Custom_Object_Construction_Kit/Stats/Generated/Data/COCK_spells.txt", 0)
 end
 
 -- get index by item directly

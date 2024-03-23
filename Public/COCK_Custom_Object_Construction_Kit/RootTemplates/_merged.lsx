@@ -22,18 +22,23 @@
 						<children>
 							<node id="Action">
 								<attribute id="ActionType" type="int32" value="14" /> -- REQUIRED - "14" = Sit - "12" Use/interact action
+								<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+										</node>
+								</children>
 							</node>
 						</children>
 					</node>
 				</children>
-				
+
 			<!-- Example Object -->
 
 				<node id="GameObjects">
 					<attribute id="Name" type="FixedString" value="COCK_Test" /> -- REQUIRED - For worldspace object "Name_UUID" output
 					<attribute id="MapKey" type="FixedString" value="cc87d017-c6cc-40e3-ae46-d56bd12e6d30" /> -- REQUIRED - But here never used anywhere because this is an example
 					<attribute id="ParentTemplateId" type="FixedString" value="81eeed30-7459-4412-84d6-13274c436e4b" /> -- REQUIRED - This makes the gameobject use the setup of COCK_Template
-					<attribute id="VisualTemplate" type="FixedString" value="be71f516-2ea6-8037-6302-4c10294dce32" /> -- REQUIRED - The actual model UUID -- REQUIRES interact bones
+					<attribute id="VisualTemplate" type="FixedString" value="0f2ccca6-3ce8-4271-aec0-820f6581c551" /> -- REQUIRED - The actual model UUID -- REQUIRES interact bones
 					<attribute id="DisplayName" type="TranslatedString" handle="hdcc11ffdgcf24g4888gaf6bg9b5f4fc57385" version="1" /> -- REQUIRED - Mouseover tooltip name of the gameobject
 					<attribute id="Type" type="FixedString" value="item" />
 					<!-- <attribute id="Stats" type="FixedString" value="" /> --> -- Optional because ParentTemplate uses it - Different statsets can be created in COCK_object.txt
