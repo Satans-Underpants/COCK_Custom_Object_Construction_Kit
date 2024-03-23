@@ -13,3 +13,8 @@ data "TargetConditions" "CanStand('')  and not Character() and not Self()"
 data "CastSound" "Spell_Cast_Utility_DimensionDoor_L4to5"
 data "TargetSound" "Spell_Impact_Utility_DimensionDoor_L4to5"
 data "SpellFlags" "ImmediateCast;IsLinkedSpellContainer"
+
+new entry "COCK_Test_Anim"
+type "SpellData"
+data "SpellType" "Shout"
+data "SpellAnimation" "003624dd-690b-49f3-83f4-435ae4f40e6a"

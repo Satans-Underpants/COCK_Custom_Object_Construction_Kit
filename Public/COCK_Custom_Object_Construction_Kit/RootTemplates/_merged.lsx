@@ -16,33 +16,12 @@
 					<attribute id="Type" type="FixedString" value="item" /> -- REQUIRED
 					<attribute id="CanBeMoved" type="bool" value="True" /> -- REQUIRED - Not needed for objects using the template
 					<attribute id="WalkThrough" type="bool" value="True" /> -- OPTIONAL
-					<children>
-						<node id="OnUsePeaceActions">
-							<children>
-								<node id="Action">
-									<attribute id="ActionType" type="int32" value="14" /> -- REQUIRED - "14" = Use/interact action
-								</node>
-							</children>
-						</node>
-					</children>
-				</node>
-				
-			<!-- Example Object -->
-
-				<node id="GameObjects">
-					<attribute id="Name" type="FixedString" value="COCK_Test" /> -- REQUIRED - For worldspace object "Name_UUID" output
-					<attribute id="MapKey" type="FixedString" value="cc87d017-c6cc-40e3-ae46-d56bd12e6d30" /> -- REQUIRED - But here never used anywhere because this is an example
-					<attribute id="ParentTemplateId" type="FixedString" value="81eeed30-7459-4412-84d6-13274c436e4b" /> -- REQUIRED - This makes the gameobject use the setup of COCK_Template
-					<attribute id="VisualTemplate" type="FixedString" value="a92ada31-bdae-40ea-95fb-5b47191f1cf4" /> -- REQUIRED - The actual model UUID -- REQUIRES interact bones
-					<attribute id="DisplayName" type="TranslatedString" handle="hdcc11ffdgcf24g4888gaf6bg9b5f4fc57385" version="1" /> -- REQUIRED - Mouseover tooltip name of the gameobject
-					<attribute id="Type" type="FixedString" value="item" />
-					<!-- <attribute id="Stats" type="FixedString" value="" /> --> -- Optional because ParentTemplate uses it - Different statsets can be created in chair_object.txt
 				</node>
 					<children>
 						<node id="OnUsePeaceActions">
 							<children>
 								<node id="Action">
-									<attribute id="ActionType" type="int32" value="14" /> -- REQUIRED - "14" = Use/interact action
+									<attribute id="ActionType" type="int32" value="14" /> -- REQUIRED - "14" = Sit - "12" Use/interact action
 									<children>
 										<node id="Attributes">
 											<attribute id="Animation" type="FixedString" value="" />
@@ -52,7 +31,18 @@
 							</children>
 						</node>
 					</children>
+			<!-- Example Object -->
 
+				<node id="GameObjects">
+					<attribute id="Name" type="FixedString" value="COCK_Test" /> -- REQUIRED - For worldspace object "Name_UUID" output
+					<attribute id="MapKey" type="FixedString" value="cc87d017-c6cc-40e3-ae46-d56bd12e6d30" /> -- REQUIRED - But here never used anywhere because this is an example
+					<attribute id="ParentTemplateId" type="FixedString" value="81eeed30-7459-4412-84d6-13274c436e4b" /> -- REQUIRED - This makes the gameobject use the setup of COCK_Template
+					<attribute id="VisualTemplate" type="FixedString" value="be71f516-2ea6-8037-6302-4c10294dce32" /> -- REQUIRED - The actual model UUID -- REQUIRES interact bones
+					<attribute id="DisplayName" type="TranslatedString" handle="hdcc11ffdgcf24g4888gaf6bg9b5f4fc57385" version="1" /> -- REQUIRED - Mouseover tooltip name of the gameobject
+					<attribute id="Type" type="FixedString" value="item" />
+					<!-- <attribute id="Stats" type="FixedString" value="" /> --> -- Optional because ParentTemplate uses it - Different statsets can be created in COCK_object.txt
+				</node>
+				
 -----------------------------------------------------------------------------------------------
 
 			<!-- Empty gameobject to copy/paste with COCK_Template already attached -->
@@ -67,6 +57,62 @@
 					<attribute id="DisplayName" type="TranslatedString" handle="" version="1" />
 					<attribute id="Type" type="FixedString" value="item" />
 				</node> -->
+
+				<!-- 
+					ActionTypes:
+					1	=	Open	|	For: Containers	|	Requires:	Empty Animation Attribute	|	Optional Conditions
+					2	=	Useless in terms of it only being used on a single item which isn't in the game 
+					3	=	Stairs?	|
+					4	=	Throw	|	OnDestroyAction
+					5	=	Generic Object Destroy Action	|	OnDestroyAction
+					6	=	NOT IMPLEMENTED
+					7	=	Consume Item	|	Requires:	Animation	Consume	StatsId	StatusDuration |	Optional Conditions	IsHiddenStatus
+					8	=	Attack?	|	Requires:	Empty Animation Attribute	|	Optional Attributes	Conditions
+					9	=	Open	|	For: Secret Doors	|	Requires:	Empty Animation Attribute	|	Optional Conditions	
+					10	=	Death	|	OnDestroyAction	|	Requires: Bunch of Death Attributes like SurfaceType for BloodType (Oil for Oil Barrels for instace)
+					11	=	Read	|	For: Books	|	Requires:	Requires:	Empty Animation Attribute + BookId	|	Optional Conditions
+					12	=	|
+					13	=	|
+					14	=	|
+					15	=	|
+					16	=	|
+					17	=	|
+					18	=	|
+					19	=	|
+					20	=	|
+					21	=	|
+					22	=	|
+					23	=	|
+					24	=	|
+					25	=	|
+					26	=	|
+					27	=	|
+					28	=	|
+					29	=	|
+					30	=	|
+					31	=	|
+					32	=	|
+					33	=	|
+					34	=	|
+					35	=	|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				 -->
 				
 			</children>
 		</node>
