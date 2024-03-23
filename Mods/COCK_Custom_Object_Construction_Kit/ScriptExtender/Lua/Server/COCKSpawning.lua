@@ -17,6 +17,8 @@ Ext.Osiris.RegisterListener("UsingSpell", 5, "after", function(_,spell, _, _, _)
         end
         PersistentVars['spawnedItems'] = nil
     end
+
+    
 end)
 
 

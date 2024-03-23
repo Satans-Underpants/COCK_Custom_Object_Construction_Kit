@@ -15,8 +15,14 @@ Ext.Osiris.RegisterListener("UseStarted", 2, "after", function(character, item)
         print("Spell Name = ", cock.animSpell)
         print("Animation UUID = ", cock.animID)
 
+        local itemLocation = {}
+        itemLocation.MarkerX, itemLocation.MarkerY, itemLocation.MarkerZ = Osi.GetPosition(item)
+        print(Osi.GetPosition(GetHostCharacter()))
+        -- Osi.TeleportToPosition(character, itemLocation.MarkerX, itemLocation.MarkerY + 3, itemLocation.MarkerZ)
+        print(Osi.GetPosition(GetHostCharacter()))
+
         -- Osi.UseSpell(character, cock.animSpell, character)
-        Osi.PlayAnimation(character, cock.animID, "")
+        Osi.PlayLoopingAnimation(character,"", cock.animID, "", "", "", "", "")
         
     end 
 end)

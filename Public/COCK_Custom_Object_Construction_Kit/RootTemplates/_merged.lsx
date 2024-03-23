@@ -16,6 +16,7 @@
 					<attribute id="Type" type="FixedString" value="item" /> -- REQUIRED
 					<attribute id="CanBeMoved" type="bool" value="True" /> -- REQUIRED - Not needed for objects using the template
 					<attribute id="WalkThrough" type="bool" value="True" /> -- OPTIONAL
+					<attribute id="Radius" type="float" value="" />
 					<children>
 						<node id="OnUsePeaceActions">
 							<children>
@@ -24,8 +25,15 @@
 								</node>
 							</children>
 						</node>
+						<!-- Optionsl Transform -->
+						<!-- <node id="Transform">
+							<attribute id="Position" type="fvec3" value="-717.439 3.535 -775.787" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 1" />
+							<attribute id="Scale" type="float" value="1" />
+						</node> -->
 					</children>
 				</node>
+
 
 			<!-- Example Object -->
 
@@ -33,10 +41,25 @@
 					<attribute id="Name" type="FixedString" value="COCK_Test" /> -- REQUIRED - For worldspace object "Name_UUID" output
 					<attribute id="MapKey" type="FixedString" value="cc87d017-c6cc-40e3-ae46-d56bd12e6d30" /> -- REQUIRED - But here never used anywhere because this is an example
 					<attribute id="ParentTemplateId" type="FixedString" value="81eeed30-7459-4412-84d6-13274c436e4b" /> -- REQUIRED - This makes the gameobject use the setup of COCK_Template
-					<attribute id="VisualTemplate" type="FixedString" value="32f13a9f-ed51-41cd-9bed-9ccae87153e0" /> -- REQUIRED - The actual model UUID -- REQUIRES interact bones
+					<attribute id="VisualTemplate" type="FixedString" value="b30743a8-b901-41f9-9ab9-7caec9ca1f83" /> -- REQUIRED - The actual model UUID -- REQUIRES interact bones
 					<attribute id="DisplayName" type="TranslatedString" handle="hdcc11ffdgcf24g4888gaf6bg9b5f4fc57385" version="1" /> -- REQUIRED - Mouseover tooltip name of the gameobject
 					<attribute id="Type" type="FixedString" value="item" />
 					<!-- <attribute id="Stats" type="FixedString" value="" /> --> -- Optional because ParentTemplate uses it - Different statsets can be created in COCK_object.txt
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="15" /> -- REQUIRED - Check ActionTypes list
+								</node>
+							</children>
+						</node>
+						<!-- Optionsl Transform -->
+						<!-- <node id="Transform">
+							<attribute id="Position" type="fvec3" value="-717.439 3.535 -775.787" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0 0 1" />
+							<attribute id="Scale" type="float" value="1" />
+						</node> -->
+					</children>
 				</node>
 
 -----------------------------------------------------------------------------------------------
@@ -66,27 +89,27 @@
 					8	=	Attack?	|	Requires:	Empty Animation Attribute	|	Optional Attributes	Conditions
 					9	=	Open	|	For: Secret Doors	|	Requires:	Empty Animation Attribute	|	Optional Conditions	
 					10	=	Death	|	OnDestroyAction	|	Requires: Bunch of Death Attributes like SurfaceType for BloodType (Oil for Oil Barrels for instace)
-					11	=	Read	|	For: Books	|	Requires:	Requires:	Empty Animation Attribute + BookId	|	Optional Conditions
-					12	=	|
+					11	=	Read	|	For: Books	|	Requires:	Empty Animation Attribute + BookId	|	Optional Conditions
+					12	=	Use	|	For: Items
 					13	=	|
-					14	=	|
-					15	=	|
-					16	=	|
+					14	=	Sit	|	For: Chairs/Benches	|	Requires:	
+					15	=	Sleep/Lie down	|	For: Beds | Requires:	Empty Animation Attribute + Heal	Optional Conditions 
+					16	=	Slot/Combine	|	For: Socket Objects which require an item	|	Requires:	Insertslots
 					17	=	|
 					18	=	|
 					19	=	|
 					20	=	|
 					21	=	|
 					22	=	|
-					23	=	|
-					24	=	|
+					23	=	Combine	|	For: Items/Crafting
+					24	=	Climb	|	For: Ladders
 					25	=	|
-					26	=	|
+					26	=	|	OnDestroyAction
 					27	=	|
 					28	=	|
 					29	=	|
-					30	=	|
-					31	=	|
+					30	=	Read(Learn)	|	For: Books which give you Alchemy recipies
+					31	=	Consume	|	For: Tadpole Jars
 					32	=	|
 					33	=	|
 					34	=	|
