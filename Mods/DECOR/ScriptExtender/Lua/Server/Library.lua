@@ -10,23 +10,3 @@ ORIGINS = {
     ["Minthara"] = "S_GOB_DrowCommander_25721313-0c15-4935-8176-9f134385451b",
     ["Halsin"] = "S_GLO_Halsin_7628bc0e-52b8-42a7-856a-13a6fd413323",
 }
-
-
-
--- An AnimationObject contains
--- Object Name [Game Object Name]  
--- Object UUID [Game Object UUID] (USED FOR COCKSPAWNING)
--- Spell Name [Name of spell that starts animation]
--- Animation [Animation UUID]
-
-
-
-local unarmedAttack = "722df2d7-7898-4b0b-b930-5a850b55ccf0"
-
-COCK_ANIMOBJECTS = {
-
-    -- cc87 is bottle
-    -- 1d15 is kissing animation
-    ["COCK_Test"] = AnimationObject.new("COCK_Test","cc87d017-c6cc-40e3-ae46-d56bd12e6d30", "COCK_Test_Anim", unarmedAttack)
-
-}
