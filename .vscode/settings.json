@@ -1,5 +1,7 @@
 {
     "Lua.diagnostics.disable": [
         "undefined-global"
-    ]
+    ],
+    "bg3ModHelper.rootModPath": "/home/satan/Documents/BG3_MODDING/Mods/COCK_Custom_Object_Construction_Kit",
+    "bg3ModHelper.packingPriority": 0
 }
